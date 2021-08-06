@@ -1,0 +1,34 @@
+@import "./../../scss/global.scss";
+
+.wrapperAbout {
+  background-color: $main-green;
+  .contantAbout {
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 2rem 5%;
+
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+    }
+    img {
+      max-width: 53rem;
+    }
+  }
+}
+
+.wrapperFeatures {
+  background-color: $background-sand;
+  .contentFeatures {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8rem 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
