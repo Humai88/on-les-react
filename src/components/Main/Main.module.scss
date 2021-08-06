@@ -14,6 +14,7 @@
     h1 {
       font-size: 3.6rem;
       font-weight: 900;
+      color: $body-text;
     }
     img {
       max-width: 53rem;
@@ -31,4 +32,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
+}
+
+.carouselWrapper {
+  background-color: $carousel-background;
 }

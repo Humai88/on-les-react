@@ -5,6 +5,7 @@ import key from "./../../assets/img/key.png";
 import attach from "./../../assets/img/attachment.png";
 import infinit from "./../../assets/img/infinity.png";
 import { Feature } from "../Features/Feature";
+import { CarouselComponent } from "../Carosel/Carosel";
 export const Main = () => {
   return (
     <>
@@ -34,6 +35,9 @@ export const Main = () => {
             descr="Регулярное добавление актуальных учебных ресурсов"
           />
         </div>
+      </div>
+      <div className={styles.carouselWrapper}>
+        <CarouselComponent />
       </div>
     </>
   );
