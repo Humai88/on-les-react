@@ -1,0 +1,18 @@
+@import "./../../scss/global.scss";
+.wrapper {
+  background-color: $main-green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 2%;
+    padding: 1% 0;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  span {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+}
