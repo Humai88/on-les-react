@@ -1,7 +1,7 @@
 @import "./../../scss/global.scss";
 
 .wrapper {
-  background-image: url("./../../assets/img/bg2.jpg");
+  background-image: url("./../../assets/img/bg5.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,7 +11,9 @@
   justify-content: space-around;
   align-items: center;
   .img {
-    margin-top: 3rem;
+    @include media-query("lap") {
+      margin-bottom: 3rem;
+    }
     @include media-query("max", $palm-start) {
       margin-bottom: 3rem;
     }
@@ -24,13 +26,14 @@
     @include media-query("lap") {
       max-width: 70%;
       font-size: 1.6rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
       margin-bottom: 3rem;
     }
     @include media-query("max", $lap-start) {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       max-width: 80%;
       margin-bottom: 3rem;
+      margin-top: 3rem;
     }
     span {
       font-size: 2.1rem;
@@ -43,10 +46,4 @@
       }
     }
   }
-}
-.previewWrapper {
-  padding: 0 5%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }

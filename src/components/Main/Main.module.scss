@@ -15,7 +15,7 @@
       font-size: 3.6rem;
       font-weight: 900;
       color: $body-text;
-      @include media-query("max", $palm-start) {
+      @include media-query("max", $lap-start) {
         font-size: 1.5rem;
       }
       @include media-query("lap") {
@@ -24,7 +24,7 @@
     }
     img {
       max-width: 53rem;
-      @include media-query("max", $palm-start) {
+      @include media-query("max", $lap-start) {
         max-width: 23rem;
       }
     }

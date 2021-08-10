@@ -1,0 +1,44 @@
+@import "./../../scss/global.scss";
+.wrapper {
+  max-width: 30rem;
+  max-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 2rem;
+  .img {
+    width: 100%;
+    box-shadow: 1px 2px 7px #888888;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 4px 5px 8px #888888;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $grey;
+    width: 100%;
+    &:hover {
+      color: $grey;
+    }
+  }
+  .header {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.6rem;
+    width: 100%;
+    max-height: 4rem;
+    text-align: center;
+    background: linear-gradient(to bottom, $nav-hover 0%, $nav-hover 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 0px;
+    transition: background-size 0.2s;
+
+    &:hover {
+      background-size: 4px 90px;
+    }
+  }
+}

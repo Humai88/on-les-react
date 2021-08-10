@@ -1,7 +1,9 @@
 @import "./../../scss/global.scss";
 .wrapper {
   max-width: 25rem;
-
+  @include media-query("max", $palm-start) {
+    max-width: 21rem;
+  }
   .content {
     max-width: 100%;
     position: relative;

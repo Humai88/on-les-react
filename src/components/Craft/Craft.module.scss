@@ -1,7 +1,7 @@
 @import "./../../scss/global.scss";
 
 .wrapper {
-  background-image: url("./../../assets/img/bg2.jpg");
+  background-image: url("./../../assets/img/bg7.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +28,7 @@
       margin-bottom: 3rem;
     }
     @include media-query("max", $lap-start) {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       max-width: 80%;
       margin-bottom: 3rem;
     }
@@ -43,10 +43,4 @@
       }
     }
   }
-}
-.previewWrapper {
-  padding: 0 5%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
