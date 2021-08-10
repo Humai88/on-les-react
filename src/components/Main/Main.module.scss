@@ -37,3 +37,16 @@
 .carouselWrapper {
   background-color: $carousel-background;
 }
+
+.pressWrapper {
+  background-color: $background-sand;
+  padding: 3rem 0;
+  margin: 0 auto;
+  .pressContant {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
