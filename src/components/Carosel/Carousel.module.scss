@@ -1,12 +1,17 @@
 @import "./../../scss/global.scss";
 .wrapper {
   img {
-    width: auto;
     display: block;
     max-width: 31rem;
     height: auto;
     margin: 0 auto;
     margin-bottom: 5rem;
+    @include media-query("max", $palm-start) {
+      max-width: 17rem;
+    }
+    @include media-query("lap") {
+      max-width: 24rem;
+    }
   }
   .caption {
     color: $body-text;
@@ -15,15 +20,33 @@
       font-family: $pacifico;
       font-size: 3rem;
       margin-top: 5%;
+      @include media-query("max", $palm-start) {
+        font-size: 2rem;
+      }
+      @include media-query("lap") {
+        font-size: 2.6rem;
+      }
     }
     .descr {
       max-width: 45rem;
       margin: 0 auto;
+      @include media-query("lap") {
+        max-width: 90%;
+      }
+      @include media-query("max", $palm-start) {
+        max-width: 90%;
+      }
     }
     p {
       font-family: $comfortaa;
       font-size: 1.9rem;
       margin-top: 2rem;
+      @include media-query("max", $palm-start) {
+        font-size: 1.3rem;
+      }
+      @include media-query("lap") {
+        font-size: 1.8rem;
+      }
     }
   }
 }

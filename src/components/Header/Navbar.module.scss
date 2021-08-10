@@ -1,26 +1,29 @@
 @import "./../../scss/global.scss";
 
-/* CORE STYLES */
-:root {
-  --primary-color: rgba(13, 110, 139, 0.75);
-  --overlay-color: rgba(24, 39, 51, 0.85);
-  --menu-speed: 0.75s;
-}
-
 .wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   .logo {
     font-family: $pacifico;
     font-size: 2.7rem;
   }
   a {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: $comfortaa;
+    font-weight: 600;
+    @include media-query("lap") {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    @include media-query("max", $palm-start) {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
     &:hover {
-      color: #d588e0 !important;
+      color: $background-sand !important;
     }
   }
 }
@@ -28,7 +31,7 @@
 .wrapper .toggler {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -39,18 +42,17 @@
 .wrapper .hamburger {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: $main-green;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Hamburger Line */
 .wrapper .hamburger > div {
   position: relative;
   flex: none;
@@ -63,7 +65,6 @@
   transition: all 0.4s ease;
 }
 
-/* Hamburger Lines - Top & Bottom */
 .wrapper .hamburger > div::before,
 .wrapper .hamburger > div::after {
   content: "";
@@ -75,29 +76,24 @@
   background: inherit;
 }
 
-/* Moves Line Down */
 .wrapper .hamburger > div::after {
   top: 10px;
 }
 
-/* Toggler Animation */
 .wrapper .toggler:checked + .hamburger > div {
   transform: rotate(135deg);
 }
 
-/* Turns Lines Into X */
 .wrapper .toggler:checked + .hamburger > div:before,
 .wrapper .toggler:checked + .hamburger > div:after {
   top: 0;
   transform: rotate(90deg);
 }
 
-/* Rotate On Hover When Checked */
 .wrapper .toggler:checked:hover + .hamburger > div {
   transform: rotate(225deg);
 }
 
-/* Show Menu */
 .wrapper .toggler:checked ~ .menu {
   visibility: visible;
 }
@@ -114,7 +110,7 @@
 .wrapper .menu {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   visibility: hidden;
@@ -125,7 +121,8 @@
 }
 
 .wrapper .menu > div {
-  background: var(--overlay-color);
+  background: #b57cbef8;
+  // background: rgba(24, 39, 51, 0.85);
   border-radius: 50%;
   width: 200vw;
   height: 200vw;
@@ -149,7 +146,7 @@
   list-style: none;
   color: $body-text;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .wrapper .menu > div > div > ul > li > a {

@@ -1,5 +1,46 @@
 @import "./../../scss/global.scss";
 
 .wrapper {
-  background-color: $purple;
+  background-image: url("./../../assets/img/bg2.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  .img {
+    margin-top: 3rem;
+    @include media-query("max", $palm-start) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  p {
+    max-width: 60%;
+    font-size: 1.9rem;
+    color: $grey;
+    @include media-query("lap") {
+      max-width: 70%;
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    @include media-query("max", $palm-start) {
+      font-size: 1.3rem;
+      max-width: 80%;
+      margin-bottom: 3rem;
+    }
+    span {
+      font-size: 2.1rem;
+      font-weight: 700;
+      @include media-query("lap") {
+        font-size: 2rem;
+      }
+      @include media-query("max", $palm-start) {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

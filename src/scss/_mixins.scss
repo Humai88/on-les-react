@@ -28,6 +28,12 @@
 }
 
 // @include media-query("min", $palm-start){.....styles}
+// @include media-query("lap") {
+// styles
+// }
+// @include media-query("max", $palm-start) {
+// styles
+// }
 
 @mixin header {
   font-family: $josefin;

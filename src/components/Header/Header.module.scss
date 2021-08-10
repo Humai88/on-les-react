@@ -3,4 +3,14 @@
   background-color: $main-green;
   height: 60px;
   color: $body-text;
+  .logo {
+    font-family: $pacifico;
+    text-decoration: none;
+    font-size: 2.3rem;
+    color: $body-text;
+    margin-left: 1%;
+    @include media-query("max", $palm-start) {
+      font-size: 2.1rem;
+    }
+  }
 }

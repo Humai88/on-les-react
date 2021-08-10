@@ -11,9 +11,18 @@
     padding: 1rem 0;
     transition: 0.5s;
     cursor: pointer;
+
+    @include media-query("max", $palm-start) {
+      width: 2rem;
+      padding: 0.7rem 0;
+    }
   }
   span {
     margin-bottom: 1rem;
     font-size: 0.9rem;
+    @include media-query("max", $palm-start) {
+      font-size: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
   }
 }

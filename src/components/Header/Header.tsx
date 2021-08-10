@@ -6,8 +6,10 @@ import { NavLink } from "react-router-dom";
 export const Header = () => {
   return (
     <div className={styles.container}>
+      <NavLink className={styles.logo} to="/">
+        on-les
+      </NavLink>
       <Navbar />
-      {/* <NavLink>on-les</NavLink> */}
     </div>
   );
 };
