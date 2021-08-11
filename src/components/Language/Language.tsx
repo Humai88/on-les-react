@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Language.module.scss";
 import teacher from "./../../assets/img/t7.png";
 import { Preview } from "../Preview/Preview";
+import { Col, Row } from "react-bootstrap";
 export const Language = () => {
   return (
     <div>
@@ -19,11 +20,14 @@ export const Language = () => {
           навыков.
         </p>
       </div>
-      <div className={styles.previewWrapper}>
+
+      <Row className={styles.previewWrapper}>
         <Preview />
         <Preview />
         <Preview />
-      </div>
+        <Preview />
+        <Preview />
+      </Row>
     </div>
   );
 };

@@ -8,6 +8,8 @@
   align-items: center;
   margin: 1rem;
   margin-top: 2rem;
+  background-color: $pages-background !important;
+
   .img {
     width: 100%;
     box-shadow: 1px 2px 7px #888888;
@@ -36,9 +38,16 @@
     background-repeat: repeat-x;
     background-size: 0px 0px;
     transition: background-size 0.2s;
+    @include media-query("max", $palm-start) {
+      font-size: 1.1rem;
+    }
 
     &:hover {
       background-size: 4px 90px;
     }
   }
+}
+.col {
+  display: flex;
+  justify-content: center;
 }
