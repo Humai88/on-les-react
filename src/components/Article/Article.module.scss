@@ -1,0 +1,114 @@
+@import "./../../scss/global.scss";
+.wrapper {
+  background-color: $pages-background;
+  padding: 0 5%;
+  text-align: center;
+  color: $grey;
+  .featuredImg {
+    background: yellow;
+    width: 50%;
+    position: relative;
+  }
+
+  img {
+    width: 50%;
+    margin-top: 3%;
+    @include media-query("max", $palm-start) {
+      width: 70%;
+      margin-top: 2rem;
+    }
+    @include media-query("lap") {
+      width: 60%;
+      margin-top: 2rem;
+    }
+  }
+  h3 {
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 2.3rem;
+    @include media-query("max", $palm-start) {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    }
+  }
+
+  p {
+    max-width: 90%;
+    font-size: 1.9rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    @include media-query("max", $palm-start) {
+      font-size: 1.3rem;
+    }
+  }
+  .btnsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    .close {
+      border-radius: 0.2rem;
+      color: #fff8eb;
+      border: 1px solid #954ea0;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      width: 14rem;
+      height: 2.6rem;
+      background-color: #954ea0;
+    }
+
+    .close span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .close span:after {
+      content: "\00bb";
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -0.3rem;
+      transition: 0.2s;
+    }
+
+    .close:hover span {
+      padding-right: 1.1rem;
+    }
+    .close:hover {
+      background-color: #fff0d7;
+      color: #954ea0;
+    }
+    .close:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .close:active {
+      transform: scale(0.9);
+    }
+    .download {
+      border-radius: 0.2rem;
+      color: #fff8eb;
+      border: 1px solid #954ea0;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      width: 9.5rem;
+      height: 2.6rem;
+      background-color: #954ea0;
+    }
+    .download:hover {
+      background-color: #fff0d7;
+      color: #954ea0;
+    }
+    .download:active {
+      transform: scale(0.9);
+    }
+  }
+  .icon {
+    margin-right: 0.8rem;
+  }
+}

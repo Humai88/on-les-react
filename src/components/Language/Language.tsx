@@ -1,8 +1,9 @@
-import React from "react";
 import styles from "./Language.module.scss";
 import teacher from "./../../assets/img/t7.png";
 import { Preview } from "../Preview/Preview";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import data from "./../../data/data.json";
+
 export const Language = () => {
   return (
     <div>
@@ -22,11 +23,14 @@ export const Language = () => {
       </div>
 
       <Row className={styles.previewWrapper}>
-        <Preview />
-        <Preview />
-        <Preview />
-        <Preview />
-        <Preview />
+        {data.language.map((post) => (
+          <Preview
+            postUrl={`/language/${post.prevTitle}`}
+            key={post.id}
+            title={post.prevTitle}
+            imgSrc={post.prevImage}
+          />
+        ))}
       </Row>
     </div>
   );

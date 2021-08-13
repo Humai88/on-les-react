@@ -26,11 +26,6 @@ export const Navbar = () => {
           <div>
             <ul>
               <li onClick={hideNavbar}>
-                <NavLink to="/" activeClassName={styles.active}>
-                  Главная
-                </NavLink>
-              </li>
-              <li onClick={hideNavbar}>
                 <NavLink to="/language" activeClassName={styles.active}>
                   Язык
                 </NavLink>
