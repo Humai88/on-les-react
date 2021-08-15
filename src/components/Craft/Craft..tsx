@@ -2,16 +2,12 @@ import styles from "./Craft.module.scss";
 import teacher from "./../../assets/img/t3.png";
 import { Preview } from "../Preview/Preview";
 import { Row } from "react-bootstrap";
-import { getData } from "../../api/api";
-import { useEffect, useState } from "react";
-import { PostType } from "../Math/MathPage";
+import { DataType } from "../../App";
 
-export const Craft = () => {
-  const [data, setData] = useState<PostType[]>([]);
-
-  useEffect(() => {
-    getData("craft").then((dataArray) => setData(dataArray));
-  }, []);
+type PropsType = {
+  data: DataType;
+};
+export const Craft: React.FC<PropsType> = ({ data }) => {
   return (
     <div>
       <div className={styles.wrapper}>
@@ -31,7 +27,7 @@ export const Craft = () => {
       </div>
 
       <Row className={styles.previewWrapper}>
-        {data.map((post, index) => {
+        {data.craft.map((post, index) => {
           return (
             <Preview
               postUrl={`/craft/${post.prevTitle}`}

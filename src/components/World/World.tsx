@@ -2,17 +2,12 @@ import styles from "./World.module.scss";
 import teacher from "./../../assets/img/t5.png";
 import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
-import { useEffect, useState } from "react";
-import { PostType } from "../Math/MathPage";
-import { getData } from "../../api/api";
+import { DataType } from "../../App";
 
-export const World = () => {
-  const [data, setData] = useState<PostType[]>([]);
-
-  useEffect(() => {
-    getData("world").then((dataArray) => setData(dataArray));
-  }, []);
-
+type PropsType = {
+  data: DataType;
+};
+export const World: React.FC<PropsType> = ({ data }) => {
   return (
     <div>
       <div className={styles.wrapper}>
@@ -28,7 +23,7 @@ export const World = () => {
       </div>
 
       <Row className={styles.previewWrapper}>
-        {data.map((post, index) => {
+        {data.world.map((post, index) => {
           return (
             <Preview
               postUrl={`/world/${post.prevTitle}`}

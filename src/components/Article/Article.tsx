@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Article.module.scss";
 import { FaDownload } from "react-icons/fa";
 import { useHistory, useParams } from "react-router-dom";
-import data from "../../data/data.json";
 import { ErrorPage } from "../ErrorPage/ErrorPage";
-import { getData } from "../../api/api";
-import { PostType } from "../Math/MathPage";
+import { DataType } from "../../App";
 
 type ArticleParams = {
   title: string;
@@ -13,15 +11,11 @@ type ArticleParams = {
 
 export type ArticlePropsType = {
   page: "language" | "math" | "craft" | "world";
+  data: DataType;
 };
 
-export const Article: React.FC<ArticlePropsType> = ({ page }) => {
+export const Article: React.FC<ArticlePropsType> = ({ page, data }) => {
   let history = useHistory();
-  // const [data, setData] = useState<PostType[]>([]);
-
-  // useEffect(() => {
-  //   getData(page).then((dataArray) => setData(dataArray));
-  // }, []);
 
   const { title } = useParams<ArticleParams>();
 
