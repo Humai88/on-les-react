@@ -2,19 +2,26 @@ import styles from "./MathPage.module.scss";
 import teacher from "./../../assets/img/t9.png";
 import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
-import data from "./../../data/data.json";
+import { useEffect, useState } from "react";
+import { getData } from "../../api/api";
 
-// export type PostType = {
-//   id: string;
-//   image: string;
-//   title: string;
-//   content: string;
-//   link: string;
-//   prevImage: string;
-//   prevTitle: string;
-// };
+export type PostType = {
+  id: string;
+  image: string;
+  title: string;
+  content: string;
+  link: string;
+  prevImage: string;
+  prevTitle: string;
+};
 
 export const MathPage = () => {
+  const [data, setData] = useState<PostType[]>([]);
+
+  useEffect(() => {
+    getData("math").then((dataArray) => setData(dataArray));
+  }, []);
+
   return (
     <div>
       <div className={styles.wrapper}>
@@ -31,7 +38,7 @@ export const MathPage = () => {
       </div>
 
       <Row className={styles.previewWrapper}>
-        {data.math.map((post, index) => {
+        {data.map((post, index) => {
           return (
             <Preview
               postUrl={`/math/${post.prevTitle}`}

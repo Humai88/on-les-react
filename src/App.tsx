@@ -9,6 +9,8 @@ import { MathPage } from "./components/Math/MathPage";
 import { Craft } from "./components/Craft/Craft.";
 import { World } from "./components/World/World";
 import { Article } from "./components/Article/Article";
+import { useEffect } from "react";
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,14 +21,27 @@ function App() {
           <Route path="/language" exact render={() => <Language />} />
           <Route
             path="/language/:title"
+            exact
             render={() => <Article page="language" />}
           />
           <Route path="/math" exact render={() => <MathPage />} />
-          <Route path="/math/:title" render={() => <Article page="math" />} />
+          <Route
+            path="/math/:title"
+            exact
+            render={() => <Article page="math" />}
+          />
           <Route path="/craft" exact render={() => <Craft />} />
-          <Route path="/craft/:title" render={() => <Article page="craft" />} />
+          <Route
+            path="/craft/:title"
+            exact
+            render={() => <Article page="craft" />}
+          />
           <Route path="/world" exact render={() => <World />} />
-          <Route path="/world/:title" render={() => <Article page="world" />} />
+          <Route
+            path="/world/:title"
+            exact
+            render={() => <Article page="world" />}
+          />
         </div>
 
         <Footer />

@@ -2,20 +2,29 @@ import React, { useEffect, useState } from "react";
 import styles from "./Article.module.scss";
 import { FaDownload } from "react-icons/fa";
 import { useHistory, useParams } from "react-router-dom";
-import data from "./../../data/data.json";
+import data from "../../data/data.json";
 import { ErrorPage } from "../ErrorPage/ErrorPage";
+import { getData } from "../../api/api";
+import { PostType } from "../Math/MathPage";
 
 type ArticleParams = {
   title: string;
 };
 
-type ArticlePropsType = {
+export type ArticlePropsType = {
   page: "language" | "math" | "craft" | "world";
 };
 
 export const Article: React.FC<ArticlePropsType> = ({ page }) => {
-  const { title } = useParams<ArticleParams>();
   let history = useHistory();
+  // const [data, setData] = useState<PostType[]>([]);
+
+  // useEffect(() => {
+  //   getData(page).then((dataArray) => setData(dataArray));
+  // }, []);
+
+  const { title } = useParams<ArticleParams>();
+
   const currentPage = data[page];
   const article = currentPage.find((post) => post.prevTitle === title);
   if (!article) {

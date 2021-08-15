@@ -2,9 +2,16 @@ import styles from "./Language.module.scss";
 import teacher from "./../../assets/img/t7.png";
 import { Preview } from "../Preview/Preview";
 import { Row } from "react-bootstrap";
-import data from "./../../data/data.json";
+import { getData } from "../../api/api";
+import { useEffect, useState } from "react";
+import { PostType } from "../Math/MathPage";
 
 export const Language = () => {
+  const [data, setData] = useState<PostType[]>([]);
+
+  useEffect(() => {
+    getData("language").then((dataArray) => setData(dataArray));
+  }, []);
   return (
     <div>
       <div className={styles.wrapper}>
@@ -23,7 +30,7 @@ export const Language = () => {
       </div>
 
       <Row className={styles.previewWrapper}>
-        {data.language.map((post) => (
+        {data.map((post) => (
           <Preview
             postUrl={`/language/${post.prevTitle}`}
             key={post.id}
