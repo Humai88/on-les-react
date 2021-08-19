@@ -10,6 +10,7 @@ import { Craft } from "./components/Craft/Craft.";
 import { World } from "./components/World/World";
 import { Article } from "./components/Article/Article";
 import { useEffect, useState } from "react";
+import { getData } from "./api/api";
 
 export type PostType = {
   id: string;
@@ -35,22 +36,9 @@ function App() {
     world: [],
   };
   const [data, setData] = useState<DataType>(initData);
-  const getData = () => {
-    return fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((dataJson) => setData(dataJson))
-      .catch((error) => {
-        throw error;
-      });
-  };
 
   useEffect(() => {
-    getData();
+    getData().then((dataJson) => setData(dataJson));
   }, []);
 
   return (

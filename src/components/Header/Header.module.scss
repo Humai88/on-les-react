@@ -3,6 +3,13 @@
   background-color: $main-green;
   height: 60px;
   color: $body-text;
+  .logoWrapper {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
   .logo {
     font-family: $pacifico;
     text-decoration: none;
