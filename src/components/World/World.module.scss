@@ -16,6 +16,7 @@
     }
     @include media-query("max", $palm-start) {
       margin-bottom: 3rem;
+      height: 27rem;
     }
   }
 
@@ -39,10 +40,10 @@
       font-size: 2.1rem;
       font-weight: 700;
       @include media-query("lap") {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
       @include media-query("max", $lap-start) {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
     }
   }

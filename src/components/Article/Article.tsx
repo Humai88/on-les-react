@@ -21,8 +21,12 @@ export const Article: React.FC<ArticlePropsType> = ({ page, data }) => {
 
   const currentPage = data[page];
   const article = currentPage.find((post) => post.prevTitle === title);
-  if (!article) {
+
+  if (!article && currentPage.length) {
     return <ErrorPage />;
+  }
+  if (!article) {
+    return null;
   }
 
   return (

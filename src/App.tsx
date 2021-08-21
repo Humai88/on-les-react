@@ -38,7 +38,13 @@ function App() {
   const [data, setData] = useState<DataType>(initData);
 
   useEffect(() => {
-    getData().then((dataJson) => setData(dataJson));
+    getData()
+      .then((dataJson) => {
+        setData(dataJson);
+      })
+      .catch((error) => {
+        throw error;
+      });
   }, []);
 
   return (

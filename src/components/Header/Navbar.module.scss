@@ -14,10 +14,12 @@
     @include media-query("lap") {
       font-size: 2rem;
       font-weight: 600;
+      margin-bottom: 2rem;
     }
     @include media-query("max", $palm-start) {
       font-size: 1.5rem;
       font-weight: 500;
+      margin-bottom: 1.6rem;
     }
 
     &:hover {
@@ -120,7 +122,6 @@
 
 .wrapper .menu > div {
   background: #b57cbef8;
-  // background: rgba(24, 39, 51, 0.85);
   border-radius: 50%;
   width: 200vw;
   height: 200vw;

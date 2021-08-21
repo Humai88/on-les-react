@@ -2,7 +2,7 @@
 .wrapper {
   max-width: 25rem;
   @include media-query("max", $palm-start) {
-    max-width: 21rem;
+    max-width: 20rem;
   }
   .content {
     max-width: 100%;

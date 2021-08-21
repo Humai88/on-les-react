@@ -1,5 +1,5 @@
 export const getData = () => {
-  return fetch("data.json", {
+  return fetch("http://localhost:3000/data.json", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
@@ -10,3 +10,6 @@ export const getData = () => {
       throw error;
     });
 };
+
+// "http://localhost:3000/data.json"
+// "https://www.on-les.com/data.json"
