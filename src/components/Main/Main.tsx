@@ -14,6 +14,7 @@ import thirdImg from "./../../assets/img/craftpic.png";
 import thirdBtn from "./../../assets/img/craft.png";
 import fourthImg from "./../../assets/img/worldpic.png";
 import fourthBtn from "./../../assets/img/world.png";
+import { Slide, Fade } from "react-awesome-reveal";
 
 export const Main = () => {
   return (
@@ -28,21 +29,23 @@ export const Main = () => {
       </div>
       <div className={styles.wrapperFeatures}>
         <div className={styles.contentFeatures}>
-          <Feature
-            imgSrc={key}
-            header="Ключевые дисциплины"
-            descr="Идеи для онлайн уроков по основным предметам начальной школы"
-          />
-          <Feature
-            imgSrc={attach}
-            header="Доступный материал"
-            descr="Большой объем бесплатного материала для скачивания"
-          />
-          <Feature
-            imgSrc={infinit}
-            header="Постоянное обновление"
-            descr="Регулярное добавление актуальных учебных ресурсов"
-          />
+          <Fade direction={"up"}>
+            <Feature
+              imgSrc={key}
+              header="Ключевые дисциплины"
+              descr="Идеи для онлайн уроков по основным предметам начальной школы"
+            />
+            <Feature
+              imgSrc={attach}
+              header="Доступный материал"
+              descr="Большой объем бесплатного материала для скачивания"
+            />
+            <Feature
+              imgSrc={infinit}
+              header="Постоянное обновление"
+              descr="Регулярное добавление актуальных учебных ресурсов"
+            />
+          </Fade>
         </div>
       </div>
       <div className={styles.carouselWrapper}>
@@ -50,12 +53,16 @@ export const Main = () => {
       </div>
       <div className={styles.pressWrapper}>
         <div className={styles.pressContant}>
-          <Press imgSrc={firstImg} url="/language" btnSrc={firstBtn} />
-          <Press imgSrc={secondImg} url="/math" btnSrc={secondBtn} />
+          <Slide direction={"left"}>
+            <Press imgSrc={firstImg} url="/language" btnSrc={firstBtn} />
+            <Press imgSrc={secondImg} url="/math" btnSrc={secondBtn} />
+          </Slide>
         </div>
         <div className={styles.pressContant}>
-          <Press imgSrc={thirdImg} url="/craft" btnSrc={thirdBtn} />
-          <Press imgSrc={fourthImg} url="/world" btnSrc={fourthBtn} />
+          <Slide direction={"right"}>
+            <Press imgSrc={thirdImg} url="/craft" btnSrc={thirdBtn} />
+            <Press imgSrc={fourthImg} url="/world" btnSrc={fourthBtn} />
+          </Slide>
         </div>
       </div>
     </>

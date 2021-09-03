@@ -13,6 +13,7 @@ export const Language: React.FC<PropsType> = ({ data }) => {
     <div>
       <div className={styles.wrapper}>
         <img className={styles.img} src={teacher} alt="teacher" />
+
         <p>
           <span className={styles.header}>
             Язык – это путь цивилизации и культуры (с)

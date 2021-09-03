@@ -9,6 +9,10 @@
   text-align: center;
   .img {
     width: 8rem;
+    transition: transform 2s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+    }
     @include media-query("max", $palm-start) {
       width: 7rem;
     }
@@ -24,7 +28,7 @@
   }
   .descr {
     font-size: 1.5rem;
-    margin-top: 2%;
+    margin-top: 1rem;
     @include media-query("max", $palm-start) {
       font-size: 1.3rem;
       margin-top: 1rem;
