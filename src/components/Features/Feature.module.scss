@@ -7,9 +7,9 @@
   align-items: center;
   color: $grey;
   text-align: center;
+  margin-top: 1.3rem;
   .img {
     width: 8rem;
-    margin-top: 1rem;
     transition: transform 2s ease-in-out;
     &:hover {
       transform: rotate(360deg);
@@ -32,7 +32,7 @@
     margin-top: 1rem;
     @include media-query("max", $palm-start) {
       font-size: 1.3rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
   }
 }
