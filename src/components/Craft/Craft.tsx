@@ -37,7 +37,7 @@ export const Craft: React.FC<PropsType> = ({ data }) => {
         {data.reading.map((post, index) => {
           return (
             <Preview
-              postUrl={`/craft/${post.prevTitle}`}
+              postUrl={`/reading/${post.prevTitle}`}
               key={index}
               title={post.prevTitle}
               imgSrc={post.prevImage}
