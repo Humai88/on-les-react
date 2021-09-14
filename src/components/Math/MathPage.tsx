@@ -3,6 +3,7 @@ import teacher from "./../../assets/img/t9.png";
 import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
 import { DataType } from "../../App";
+import { Helmet } from "react-helmet";
 
 type PropsType = {
   data: DataType;
@@ -11,6 +12,13 @@ type PropsType = {
 export const MathPage: React.FC<PropsType> = ({ data }) => {
   return (
     <div>
+      <Helmet>
+        <title>Математика</title>
+        <meta
+          name="description"
+          content="Учебные материалы для уроков математики."
+        />
+      </Helmet>
       <div className={styles.wrapper}>
         <p>
           <span className={styles.header}>

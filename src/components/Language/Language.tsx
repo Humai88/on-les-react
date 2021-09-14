@@ -3,6 +3,7 @@ import teacher from "./../../assets/img/t7.png";
 import { Preview } from "../Preview/Preview";
 import { Row } from "react-bootstrap";
 import { DataType } from "../../App";
+import { Helmet } from "react-helmet";
 
 type PropsType = {
   data: DataType;
@@ -11,6 +12,13 @@ type PropsType = {
 export const Language: React.FC<PropsType> = ({ data }) => {
   return (
     <div>
+      <Helmet>
+        <title>Язык</title>
+        <meta
+          name="description"
+          content="Учебные материалы для уроков по русскому и английскому языкам."
+        />
+      </Helmet>
       <div className={styles.wrapper}>
         <img className={styles.img} src={teacher} alt="teacher" />
 

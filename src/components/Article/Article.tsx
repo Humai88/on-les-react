@@ -10,7 +10,7 @@ type ArticleParams = {
 };
 
 export type ArticlePropsType = {
-  page: "language" | "math" | "craft" | "world";
+  page: "language" | "math" | "reading" | "world";
   data: DataType;
 };
 

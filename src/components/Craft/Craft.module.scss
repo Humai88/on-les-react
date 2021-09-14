@@ -1,7 +1,7 @@
 @import "./../../scss/global.scss";
 
 .wrapper {
-  background-image: url("./../../assets/img/bg7.jpg");
+  background-image: url("./../../assets/img/bgleft.png");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +45,10 @@
     }
   }
 }
+.container {
+  background-color: $pages-background;
+}
 .previewWrapper {
   padding: 0 5%;
-  background-color: $pages-background;
+  // background-color: $pages-background;
 }

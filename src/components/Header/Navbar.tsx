@@ -36,8 +36,8 @@ export const Navbar = () => {
                 </NavLink>
               </li>
               <li onClick={hideNavbar}>
-                <NavLink to="/craft" activeClassName={styles.active}>
-                  Творчество
+                <NavLink to="/reading" activeClassName={styles.active}>
+                  Чтение
                 </NavLink>
               </li>
               <li onClick={hideNavbar}>
