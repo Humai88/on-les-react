@@ -6,13 +6,13 @@ import infinit from "./../../assets/img/inf1.png";
 import { Feature } from "../Features/Feature";
 import { CarouselComponent } from "../Carosel/Carosel";
 import { Press } from "../PressSection/Press";
-import firstImg from "./../../assets/img/lang pur.png";
+import firstImg from "./../../assets/img/2.png";
 import firstBtn from "./../../assets/img/pen btn.png";
-import secondImg from "./../../assets/img/math pur.png";
+import secondImg from "./../../assets/img/3.png";
 import secondBtn from "./../../assets/img/math.png";
-import thirdImg from "./../../assets/img/read pur.png";
+import thirdImg from "./../../assets/img/1.png";
 import thirdBtn from "./../../assets/img/lang.png";
-import fourthImg from "./../../assets/img/world pur.png";
+import fourthImg from "./../../assets/img/4.png";
 import fourthBtn from "./../../assets/img/world.png";
 import { Slide, Fade } from "react-awesome-reveal";
 

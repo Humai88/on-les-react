@@ -1,5 +1,5 @@
 import styles from "./Craft.module.scss";
-import teacher from "./../../assets/img/t3.png";
+import teacher from "./../../assets/img/t9.png";
 import { Preview } from "../Preview/Preview";
 import { Row } from "react-bootstrap";
 import { DataType } from "../../App";
