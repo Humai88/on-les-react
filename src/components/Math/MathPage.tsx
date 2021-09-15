@@ -1,5 +1,5 @@
 import styles from "./MathPage.module.scss";
-import teacher from "./../../assets/img/t3.png";
+import teacher from "./../../assets/img/tmath.png";
 import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
 import { DataType } from "../../App";

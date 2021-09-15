@@ -12,6 +12,7 @@
   align-items: center;
   .img {
     margin-top: 3rem;
+    height: 39rem;
     @include media-query("max", $palm-start) {
       margin-bottom: 3rem;
       height: 27rem;

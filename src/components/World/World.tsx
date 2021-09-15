@@ -1,5 +1,5 @@
 import styles from "./World.module.scss";
-import teacher from "./../../assets/img/t5.png";
+import teacher from "./../../assets/img/tworld.png";
 import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
 import { DataType } from "../../App";
