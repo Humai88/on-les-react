@@ -6,7 +6,7 @@ import { Language } from "./components/Language/Language";
 import { Main } from "./components/Main/Main";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MathPage } from "./components/Math/MathPage";
-import { Craft } from "./components/Craft/Craft";
+import { Reading } from "./components/Reading/Reading";
 import { World } from "./components/World/World";
 import { Article } from "./components/Article/Article";
 import { useEffect, useState } from "react";
@@ -30,6 +30,9 @@ function App() {
       .catch((error) => {
         throw error;
       });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -61,7 +64,7 @@ function App() {
             exact
             render={() => <Article data={data} page="math" />}
           />
-          <Route path="/reading" exact render={() => <Craft data={data} />} />
+          <Route path="/reading" exact render={() => <Reading data={data} />} />
           <Route
             path="/reading/:title"
             exact

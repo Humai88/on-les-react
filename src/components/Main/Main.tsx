@@ -29,7 +29,7 @@ export const Main = () => {
       </div>
       <div className={styles.wrapperFeatures}>
         <div className={styles.contentFeatures}>
-          <Fade direction={"up"}>
+          <Fade direction={"up"} duration={1000}>
             <Feature
               imgSrc={key}
               header="Ключевые дисциплины"
@@ -55,12 +55,16 @@ export const Main = () => {
         <div className={styles.pressContant}>
           <Slide duration={1300} direction={"left"}>
             <Press imgSrc={firstImg} url="/language" btnSrc={firstBtn} />
+          </Slide>
+          <Slide duration={1300} direction={"right"}>
             <Press imgSrc={secondImg} url="/math" btnSrc={secondBtn} />
           </Slide>
         </div>
         <div className={styles.pressContant}>
-          <Slide duration={1600} direction={"right"}>
+          <Slide duration={1300} direction={"left"}>
             <Press imgSrc={thirdImg} url="/reading" btnSrc={thirdBtn} />
+          </Slide>
+          <Slide duration={1300} direction={"right"}>
             <Press imgSrc={fourthImg} url="/world" btnSrc={fourthBtn} />
           </Slide>
         </div>

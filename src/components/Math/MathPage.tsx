@@ -4,12 +4,16 @@ import { Row } from "react-bootstrap";
 import { Preview } from "../Preview/Preview";
 import { DataType } from "../../App";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 type PropsType = {
   data: DataType;
 };
 
 export const MathPage: React.FC<PropsType> = ({ data }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Helmet>

@@ -14,7 +14,7 @@
     width: 50%;
     margin-top: 3%;
     @include media-query("max", $palm-start) {
-      width: 70%;
+      width: 87%;
       margin-top: 2rem;
     }
     @include media-query("lap") {

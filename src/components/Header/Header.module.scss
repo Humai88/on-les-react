@@ -17,7 +17,7 @@
     color: $body-text;
     margin-left: 1%;
     @include media-query("max", $palm-start) {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
     }
   }
 }

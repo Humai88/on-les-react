@@ -1,14 +1,18 @@
-import styles from "./Craft.module.scss";
+import styles from "./Reading.module.scss";
 import teacher from "./../../assets/img/tread.png";
 import { Preview } from "../Preview/Preview";
 import { Row } from "react-bootstrap";
 import { DataType } from "../../App";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 type PropsType = {
   data: DataType;
 };
-export const Craft: React.FC<PropsType> = ({ data }) => {
+export const Reading: React.FC<PropsType> = ({ data }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={styles.container}>
       <Helmet>
