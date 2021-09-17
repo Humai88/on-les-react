@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Article.module.scss";
 import { FaDownload } from "react-icons/fa";
 import { useHistory, useParams } from "react-router-dom";
@@ -16,7 +16,9 @@ export type ArticlePropsType = {
 
 export const Article: React.FC<ArticlePropsType> = ({ page, data }) => {
   let history = useHistory();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { title } = useParams<ArticleParams>();
 
   const currentPage = data[page];
